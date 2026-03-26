@@ -1,21 +1,12 @@
 import streamlit as st
 
-# Հետաքրքիր բարի գալուստ
-st.title("SmartTickets App")
-st.header("Բարև, օգտվող 🌟")
+# Ձեր icon ֆայլի ուղին
+icon_path = "Okay_jeef.png"  # կամ "icon.ico"
 
-# Input դաշտ
-name = st.text_input("Գրի քո անունը՝")
-if name:
-    st.write(f"Բարև, {name}! Բարի գալուստ SmartTickets- ին 👋")
-
-# Բազմընտրանքային ընտրություն
-ticket_type = st.selectbox(
-    "Ընտրիր տոմսի տեսակը", 
-    ["Կոնցերտ", "Թատրոն", "Սպորտ"]
+# Page config, սա միշտ առաջինը պետք է լինի
+st.set_page_config(
+    page_title="Իմ հավելվածը",
+    page_icon=icon_path
 )
-st.write(f"Դու ընտրեցիր {ticket_type} տոմսը 🎟️")
 
-# Բազային կոճակ
-if st.button("Գնել տոմս"):
-    st.success(f"Շնորհավորում ենք, {name}! Գնել ես {ticket_type} տոմսը ✅")
+st.title("Բարի գալուստ իմ հավելվածը!")
